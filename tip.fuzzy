@@ -1,0 +1,26 @@
+tipRulebase
+
+Rule 1: If food_quality is poor or service is poor then tip is low
+Rule 2: If service is average then tip is medium
+Rule 3: If food_quality is good or service is good then tip is high
+
+food_quality
+
+poor 0 0 0 5
+average 5 5 5 5
+good 10 10 5 0
+
+service
+
+poor 0 0 0 5
+average 5 5 5 5
+good 10 10 5 0
+
+tip
+
+low 0 0 0 13
+medium 13 13 13 12
+high 25 25 12 0
+
+food_quality = 6.5
+service = 9.8

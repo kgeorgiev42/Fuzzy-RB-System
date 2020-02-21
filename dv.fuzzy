@@ -1,0 +1,27 @@
+dvRulebase
+
+Rule 1: If driving is good and journey_time is short then tip is big
+Rule 2: If driving is good or journey_time is short then tip is moderate
+Rule 3: If driving is average and journey_time is medium then tip is moderate
+Rule 4: If driving is bad and journey_time is long then tip is small
+
+driving
+
+bad 0 30 0 20
+average 50 50 20 20
+good 80 100 20 0
+
+journey_time
+
+short 0 0 0 10
+medium 10 10 5 5
+long 20 20 10 0
+
+tip
+
+small 50 50 50 50
+moderate 100 100 50 50
+big 150 150 50 50
+
+journey_time = 12
+driving = 45

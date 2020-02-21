@@ -1,0 +1,13 @@
+ss=10
+Anticedent HR statistics:DescribeResult(nobs=610, minmax=(40.1, 119.1), mean=73.45245, variance=471.64072, skewness=0.289186954498291, kurtosis=-1.0185485356683268)
+Anticedent R statistics:DescribeResult(nobs=610, minmax=(0.1, 11.1), mean=5.968852, variance=8.981131, skewness=-0.22143754363059998, kurtosis=-0.9003061764758828)
+Consequent D statistics:DescribeResult(nobs=610, minmax=(0.6900197762692118, 9.872308808816049), mean=5.027022334457818, variance=5.428515394993338, skewness=0.10615436764020496, kurtosis=-0.8157969265435896)
+
+Anticedent Journey_length statistics:DescribeResult(nobs=1950, minmax=(0.1, 19.1), mean=9.407692, variance=32.588707, skewness=0.036728035658597946, kurtosis=-1.1774288182605117)
+Anticedent Driving_quality statistics:DescribeResult(nobs=1950, minmax=(0.1, 99.1), mean=49.471786, variance=854.1843, skewness=0.01290835626423359, kurtosis=-1.2416183141978319)
+Consequent Size_of_tip statistics:DescribeResult(nobs=1950, minmax=(49.999999999999545, 124.99857134689131), mean=92.42346393164583, variance=557.8044032960389, skewness=-0.902344543297473, kurtosis=-0.43311999597012685)
+
+ss=5
+Anticedent Food_quality statistics:DescribeResult(nobs=400, minmax=(0.1, 9.6), mean=4.8499994, variance=8.333335, skewness=7.13083750270016e-07, kurtosis=-1.2060148529945338)
+Anticedent Service statistics:DescribeResult(nobs=400, minmax=(0.1, 9.6), mean=4.85, variance=8.333334, skewness=1.9100458814591548e-07, kurtosis=-1.2060151842384512)
+Consequent Tip statistics:DescribeResult(nobs=400, minmax=(4.853499265345309, 18.905588576137017), mean=12.307862887344356, variance=7.214800911748155, skewness=-0.2767559297815048, kurtosis=0.9058882298699418)

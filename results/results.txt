@@ -1,0 +1,17 @@
+--- Measurements ---
+Food_quality = 6.5
+Service = 9.8
+--- Simulation results ---
+Tip = 19.857694675469403
+
+--- Measurements ---
+Journey_length = 12.0
+Driving_quality = 45.0
+--- Simulation results ---
+Size_of_tip = 86.53846153846231
+
+--- Measurements ---
+HR = 55.0
+R = 4.0
+--- Simulation results ---
+D = 2.6635857858523186

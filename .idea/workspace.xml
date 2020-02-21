@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf44b66f-dea5-4e34-b608-a323ec1fdb85" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="6c3706f2-a4b9-4254-90b8-a25c3939e267" />
+  <component name="ProjectId" id="1XQk2ypjeHHzQYixlK3NdjPG6TP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\KRR_fuzzy" />
+      <recent name="C:\Users\User\PycharmProjects\KRR_fuzzy\modules" />
+      <recent name="C:\Users\User\PycharmProjects\KRR_fuzzy\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.simulate_measurements">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fuzzy_controller" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\KRR_fuzzy\fuzzy_test_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fuzzy_test_control" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\KRR_fuzzy\fuzzy_test_control.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fuzzy_test_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\KRR_fuzzy\fuzzy_test_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simulate_fuzzy_sets" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\KRR_fuzzy\simulate_fuzzy_sets.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simulate_measurements" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="KRR_fuzzy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\User\PycharmProjects\KRR_fuzzy\simulate_measurements.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.simulate_measurements" />
+        <item itemvalue="Python.simulate_fuzzy_sets" />
+        <item itemvalue="Python.fuzzy_test_control" />
+        <item itemvalue="Python.fuzzy_test_main" />
+        <item itemvalue="Python.fuzzy_controller" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf44b66f-dea5-4e34-b608-a323ec1fdb85" name="Default Changelist" comment="" />
+      <created>1580985503010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580985503010</updated>
+      <workItem from="1580985504297" duration="21671000" />
+      <workItem from="1581068031194" duration="22434000" />
+      <workItem from="1581163865836" duration="12383000" />
+      <workItem from="1581262440869" duration="21981000" />
+      <workItem from="1581330664159" duration="16447000" />
+      <workItem from="1581415947860" duration="3265000" />
+      <workItem from="1581431674444" duration="13013000" />
+      <workItem from="1581587770621" duration="2523000" />
+      <workItem from="1582137552505" duration="496000" />
+      <workItem from="1582198324172" duration="8871000" />
+      <workItem from="1582212788622" duration="10000" />
+      <workItem from="1582290135072" duration="13023000" />
+      <workItem from="1582304937523" duration="7582000" />
+      <workItem from="1582312545074" duration="1579000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581011697097">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1581011697097" />
+    <state x="515" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582310455509">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="515" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1582310455509" />
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581283516481">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="499" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1581283516481" />
+    <state x="379" y="171" key="FileChooserDialogImpl" timestamp="1581417243511">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="379" y="171" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1581417243511" />
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1582312528856">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1582312528856" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.1.bottom" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.1.center" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.1.left" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state width="1493" height="201" key="GridCell.Tab.1.right" timestamp="1582312528857">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1582312528857" />
+    <state x="277" y="74" key="SettingsEditor" timestamp="1581026263831">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1581026263831" />
+    <state width="775" height="439" key="XDebugger.FullValuePopup" timestamp="1581268618976">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="775" height="439" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1581268618976" />
+    <state x="-2" y="94" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1582205596106">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="-2" y="94" width="1350" height="678" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1582205596106" />
+    <state x="465" y="255" key="com.intellij.ide.util.TipDialog" timestamp="1582312545582">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="465" y="255" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1582312545582" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1581263304031">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1581263304031" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="moment" />
+        <watch expression="area" />
+        <watch expression="sum_moment_area" />
+        <watch expression="sum_area" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/KRR_fuzzy$fuzzy_controller.coverage" NAME="fuzzy_controller Coverage Results" MODIFIED="1582308222043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KRR_fuzzy$simulate_fuzzy_sets.coverage" NAME="simulate_fuzzy_sets Coverage Results" MODIFIED="1582311000934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/KRR_fuzzy$fuzzy_load.coverage" NAME="fuzzy_load Coverage Results" MODIFIED="1581444326022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/KRR_fuzzy$simulate_measurements.coverage" NAME="simulate_measurements Coverage Results" MODIFIED="1582311449674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/KRR_fuzzy$measurements_sim.coverage" NAME="measurements_sim Coverage Results" MODIFIED="1582205243660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+</project>
