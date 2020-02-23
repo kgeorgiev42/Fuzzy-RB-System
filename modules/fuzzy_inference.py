@@ -1,4 +1,5 @@
 import seaborn as sns
+import numpy as np
 
 from modules.fuzzy_load import *
 
@@ -6,6 +7,23 @@ sns.set(style='darkgrid', palette="Paired")
 
 
 def map_variable_types(measurement_file, fuzzy_variables, var_names, x_ranges, fuzzy_dict):
+    '''
+    Creates a lookup mapping of the current fuzzy variables, which includes their range and type (anticedent or consequent).
+    
+        Args:
+            measurement_file(str): the input knowledge base file name
+            fuzzy_variables(dict): the processed fuzzy dictionary with memberships
+            var_names(list): lookup list with variable names
+            x_ranges(dict): membership ranges for each fuzzy variable
+            fuzzy_dict(dict): the original parsed fuzzy variable dictionary
+
+        Returns:
+            var_type_list(list): list of dictionaries containing the variable name, type and range
+            fuzzy_measurements(dict): parsed dictionary of measurements
+            
+    '''
+
+
     var_type_list = []
     fuzzy_measurements = read_measurements(measurement_file, fuzzy_variables)
 
@@ -35,6 +53,24 @@ def map_variable_types(measurement_file, fuzzy_variables, var_names, x_ranges, f
 
 
 def infer_rules(file, fuzzy_vars, fuzzy_dict, fuzzy_measurements, x_ranges):
+    '''
+    Creates activations for each fuzzy rule, based on the Mamdani inference principles.
+    The areas of activation are then aggregated using max-min composition.
+    Can handle simple rules with 1 (SIMPLE) or 2 (AND, OR) conditions.
+
+        Args:
+            file(str): the input knowledge base file name
+            fuzzy_vars(dict): the processed fuzzy dictionary with memberships
+            fuzzy_dict(dict): the original parsed fuzzy variable dictionary
+            fuzzy_measurements(dict): the original parsed measurements dictionary
+            x_ranges(dict): membership ranges for each fuzzy variable
+            
+        Returns:
+            activation_dict(dict): resulting membership values throughout the range
+            
+    '''
+
+
     anticedent_keys = list(fuzzy_measurements.keys())
     for k, v in fuzzy_dict.items():
         if str(k) in anticedent_keys:

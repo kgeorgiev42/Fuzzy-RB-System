@@ -1,22 +1,27 @@
 import random
+import os
 import sys
 
-import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy import stats
+import matplotlib.pyplot as plt
 from tqdm import tqdm
+from scipy import stats
 
 from modules.fuzzy_control_system import map_variable_types, create_rule_control_system, apply_rules, view_defuzz
 from modules.fuzzy_load import *
-from modules.fuzzy_membership import plot_fuzzy_sets, create_membership_functions
+from modules.fuzzy_membership import create_membership_functions
 
 sns.set(style='darkgrid', palette="Paired")
 
 
 class HiddenPrints:
+    '''
+    Hides printed values for debugging.
+    '''
     def __enter__(self):
         self._original_stdout = sys.stdout
         sys.stdout = open(os.devnull, 'w')
+
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         sys.stdout.close()
@@ -24,6 +29,23 @@ class HiddenPrints:
 
 
 def sample_fuzzy(file, keep_prob=0.5, n_iter=1000, step_size=100, conseq_var='D'):
+    '''
+    Randomly samples different variations of fuzzy sets for each variable category with a certain probability.
+    
+        Args:
+            file(str): the knowledge base file name
+            keep_prob(float): probability to resample the original set for each iteration (def: 0.5)
+            n_iter(int): number of iterations of the simulation (def: 1000)
+            step_size(int): number of steps to skip before displaying the generated fuzzy set (def: 100) conseq_var(str): the name of the consequent variable (ex. 'D')
+
+        Returns:
+            fuzzy_result_list(list): the list of simulation results
+            valid_samples(int): count of valid samples generated
+            fuzzy_sample_list(list): the list of sampled membership functions
+            
+    '''
+
+
     print('--- Random sampling fuzzy sets ---')
     fuzzy_result_list = []
     valid_samples = 0
@@ -78,6 +100,16 @@ def sample_fuzzy(file, keep_prob=0.5, n_iter=1000, step_size=100, conseq_var='D'
 
 
 def plot_simulated_defuzz(fuzzy_result_list, samples):
+    '''
+    Plots the defuzzified value for each valid iteration.
+    
+        Args:
+            fuzzy_result_list(list): the list of simulation results
+            samples(int): count of valid samples generated
+            
+    '''
+
+
     fz_lbl = ""
     dfz_values = []
     for fz in fuzzy_result_list:
@@ -86,7 +118,7 @@ def plot_simulated_defuzz(fuzzy_result_list, samples):
                 fz_lbl = k
             dfz_values.append(v)
 
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(8, 6))
     plt.title('Defuzzified values')
     sns.lineplot(np.arange(1, samples + 1), dfz_values, color='darkgreen')
     plt.xlabel('Valid Sample size', fontsize=14)
@@ -95,9 +127,9 @@ def plot_simulated_defuzz(fuzzy_result_list, samples):
     plt.show()
     print('Consequent {} statistics:{}'.format(fz_lbl, stats.describe(dfz_values)))
 
-
 if __name__ == '__main__':
     with HiddenPrints():
-        # argv[1] = input file name, argv[2] = variable name of the target consequent, argv[3] = step size (def. 100)
-        fuzzy_result_list, samples, fuzzy_sample_list = sample_fuzzy(sys.argv[1], conseq_var=sys.argv[2], step_size=int(sys.argv[3]))
+        # argv[1] = input file name, argv[2] = variable name of the target consequent, argv[3] = step size (def. 200)
+        fuzzy_result_list, samples, fuzzy_sample_list = sample_fuzzy(sys.argv[1], conseq_var=sys.argv[2],
+                                                                     step_size=int(sys.argv[3]))
     plot_simulated_defuzz(fuzzy_result_list, samples)

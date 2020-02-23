@@ -1,4 +1,5 @@
 import sys
+import os
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -11,6 +12,9 @@ from modules.fuzzy_membership import create_membership_functions
 
 
 class HiddenPrints:
+    '''
+	Hides printed values for debugging.
+    '''
     def __enter__(self):
         self._original_stdout = sys.stdout
         sys.stdout = open(os.devnull, 'w')
@@ -21,6 +25,21 @@ class HiddenPrints:
 
 
 def sample_defuzz(file, antc_i='HR', antc_j='R', step_size=5):
+    '''
+    Inferences the results for each possible sample from the two anticedents with a fixed step size.
+    
+        Args:
+            file(str): the knowledge base file name
+			antc_i(str): the variable name of the first anticedent (ex. 'HR')
+			antc_j(str): the variable name of the second anticedent (ex. 'R')
+			step_size(int): number of steps to skip before displaying the generated fuzzy set (def: 100)
+			
+		Returns:
+			fuzzy_result_list(list): the list of simulation results
+			fuzzy_sample_list(list): the list of sampled membership functions
+			n_samples(int): count of inferenced samples
+            
+    '''
     print('--- Simulating all defuzzified values in the target sets ---')
     fuzzy_sample_list = []
     fuzzy_result_list = []
@@ -48,6 +67,17 @@ def sample_defuzz(file, antc_i='HR', antc_j='R', step_size=5):
 
 
 def plot_simulated_measurements(fuzzy_sample_list, fuzzy_result_list, n_samples, antc_i='HR', antc_j='R'):
+    '''
+    Plots the measurement values and defuzzification results with respect to the number of iterations.
+    
+        Args:
+            fuzzy_result_list(list): the list of simulation results
+			fuzzy_sample_list(list): the list of sampled membership functions
+			n_samples(int): count of inferenced samples
+			antc_i(str): the variable name of the first anticedent (ex. 'HR')
+			antc_j(str): the variable name of the second anticedent (ex. 'R')
+
+    '''
     ms_i = [];
     ms_j = [];
     for fuzzy_sample in fuzzy_sample_list:
@@ -65,7 +95,7 @@ def plot_simulated_measurements(fuzzy_sample_list, fuzzy_result_list, n_samples,
                 fz_lbl = k
             dfz_values.append(v)
 
-    fig, axs = plt.subplots(3, figsize=(12, 12))
+    fig, axs = plt.subplots(3, figsize=(8, 6))
     sns.lineplot(ms_i, np.arange(1, n_samples + 1), color='red', ax=axs[0])
     axs[0].set_ylabel('Iterations', fontsize=14)
     axs[0].set_xlabel(antc_i, fontsize=14)
@@ -77,7 +107,7 @@ def plot_simulated_measurements(fuzzy_sample_list, fuzzy_result_list, n_samples,
     sns.lineplot(dfz_values, np.arange(1, n_samples + 1), color='darkgreen', ax=axs[2])
     axs[2].set_ylabel('Iterations', fontsize=14)
     axs[2].set_xlabel(str('Defuzzified value: ' + fz_lbl), fontsize=14)
-    plt.subplots_adjust(hspace=0.33)
+    plt.subplots_adjust(hspace=0.66)
     plt.show()
 
     print('Anticedent {} statistics:{}'.format(antc_i, stats.describe(ms_i)))

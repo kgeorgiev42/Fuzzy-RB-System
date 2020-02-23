@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 from modules.fuzzy_load import *
 
@@ -7,6 +7,23 @@ sns.set(style='darkgrid', palette="Paired")
 
 
 def create_membership_functions(file, from_file=True):
+    '''
+    Creates trapezoidal membership functions using the parsed fuzzy variables.
+    Generates discrete values of membership based on the estimated range of the variables.
+
+        Args:
+            file(str): the input filename
+            from_file: feed the file as input or feed an already parsed dictionary (def. True)
+
+        Returns:
+            fuzzy_dict(dict): the processed fuzzy variable dictionary with assigned memberships
+            x_ranges(dict): the generated range of values for each membership
+            var_names(list): list of variable names for lookup
+            fuzzy_variables(dict): the original parsed fuzzy variable dictionary
+            
+    '''
+
+
     if from_file:
         fuzzy_variables = read_variables(file)
     else:
@@ -86,9 +103,19 @@ def create_membership_functions(file, from_file=True):
 
 
 def plot_fuzzy_sets(fuzzy_dict, x_ranges):
+    '''
+    Creates one plot for each fuzzy variable and displays the resulting sets.
+    
+        Args:
+            fuzzy_dict(dict): the processed fuzzy variable dictionary with assigned memberships
+            x_ranges(dict): the generated range of values for each membership
+            
+    '''
+
+
     for k, v in fuzzy_dict.items():
         var_name = k
-        plt.figure(figsize=(10, 10))
+        plt.figure(figsize=(8, 6))
         plt.title(str(var_name))
         for k_j, v_j in v.items():
             sns.lineplot(x_ranges[var_name], v_j, label=str(k_j), linewidth=3)

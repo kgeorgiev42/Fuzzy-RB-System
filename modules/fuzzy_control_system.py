@@ -1,7 +1,7 @@
 ### Scikit-fuzzy
 
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 from modules.fuzzy_load import *
 
@@ -10,6 +10,23 @@ from skfuzzy import control as ctrl
 
 
 def map_variable_types(measurement_file, fuzzy_variables, var_names, x_ranges, fuzzy_dict):
+    '''
+    Creates a lookup mapping of the current fuzzy variables using skfuzzy ctrl objects (Anticedent and Consequent).
+    
+        Args:
+            measurement_file(str): the input knowledge base file name
+            fuzzy_variables(dict): the processed fuzzy dictionary with memberships
+            var_names(list): lookup list with variable names
+            x_ranges(dict): membership ranges for each fuzzy variable
+            fuzzy_dict(dict): the original parsed fuzzy variable dictionary
+
+        Returns:
+            var_type_list(list): list of dictionaries containing the variable name, type and range
+            fuzzy_measurements(dict): parsed dictionary of measurements
+            
+    '''
+
+
     var_type_list = []
     fuzzy_measurements = read_measurements(measurement_file, fuzzy_variables)
     for var_name in var_names:
@@ -29,12 +46,36 @@ def map_variable_types(measurement_file, fuzzy_variables, var_names, x_ranges, f
 
     return var_type_list, fuzzy_measurements
 
+
 def view_sample_set(fuzzy_set, target_category):
+    '''
+    Plots a sample fuzzy variable with an underlined target set.
+
+        Returns:
+            fuzzy_set[target_category].view()(matplotlib object): the target plot
+    '''
+
+
     return fuzzy_set[target_category].view()
 
 
 def create_rule_control_system(file, fuzzy_vars, var_names, vmfx_list):
+    '''
+    Creates skfuzzy Rule objects based of the dictionary of rules.
+    
+        Args:
+            file(str): the input knowledge base file name
+            fuzzy_vars(dict): the processed fuzzy dictionary with memberships
+            var_names(list): lookup list with variable names
+            vmfx_list(list): list of dictionaries containing the variable names, ranges and membership functions
+            
+        Returns:
+            rcs(list): a list of dictionaries representing the rules within the control system
+            
+    '''
     # can handle up to 5 consecutive AND or OR connectors
+
+
     fuzzy_rules = read_rulebase(file, fuzzy_vars)
     rcs = []
     idx = 1
@@ -111,12 +152,38 @@ def create_rule_control_system(file, fuzzy_vars, var_names, vmfx_list):
 
 
 def plot_rule_graphs(rule_list):
+    '''
+    Creates a DAG visualization of the rule relationships using skfuzzy's integrated networkx module.
+    
+        Args:
+            rule_list(list): a list of dictionaries representing the rules within the control system
+            
+    '''
+
+
     for rule in rule_list:
         rule.view()
         plt.show()
 
 
 def apply_rules(rcs, fuzzy_measurements, var_names, vmfx_list):
+    '''
+    Creates a ControlSystemSimulation object based on the list of rule objects.
+    Performs automatic rule inference and defuzzification using the centroid method.
+
+        Args:
+            rcs(list): a list of dictionaries representing the rules within the control system
+            fuzzy_measurements(dict): the dictionary of parsed measurements
+            var_names(list): lookup list with variable names
+            vmfx_list(list): list of dictionaries containing the variable names, ranges and membership functions
+
+        Returns:
+            ctr_sys_sim(ctrl.ControlSystemSimulation): the simulation object
+            target_consequent(str): the target fuzzy variable name
+            
+    '''
+
+
     ctrl_sys = ctrl.ControlSystem(rcs)
     ctr_sys_sim = ctrl.ControlSystemSimulation(ctrl_sys)
     ctr_sys_sim.reset()
@@ -137,5 +204,15 @@ def apply_rules(rcs, fuzzy_measurements, var_names, vmfx_list):
 
 
 def view_defuzz(result_set, ctr_sys_sim):
+    '''
+    Plots the defuzzification results from the simulation.
+    
+        Args:
+            result_set(np.array): the membership functions of the target variable
+            ctr_sys_sim(ctrl.ControlSystemSimulation): the simulation object
+            
+    '''
+
+
     result_set.view(sim=ctr_sys_sim)
     plt.show()
